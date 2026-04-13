@@ -1,5 +1,4 @@
 import React from 'react';
-import type { Topic } from '../constants';
 
 interface NavigationProps {
   interactionCount: number;

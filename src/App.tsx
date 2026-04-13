@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import { useState, useCallback, useMemo } from 'react';
 import Navigation from './components/Navigation';
 import Hero from './components/Hero';
 import FeedSide from './components/FeedSide';
@@ -7,7 +7,6 @@ import Report from './components/Report';
 import NetworkGraph from './components/NetworkGraph';
 import { 
   contentDB, 
-  TOPICS 
 } from './constants';
 import type { 
   ContentItem, 
@@ -180,7 +179,6 @@ function App() {
       {showNetwork && (
         <NetworkGraph 
           contentDB={contentDB}
-          interactionHistory={interactionHistory}
           viewedIds={viewedIds}
           likedIds={likedIds}
           skippedIds={skippedIds}

@@ -3,10 +3,10 @@ import { motion } from 'framer-motion';
 import { 
   Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer,
   LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip,
-  PieChart, Pie, Cell, Legend
+  PieChart, Pie, Cell
 } from 'recharts';
 import { TOPIC_LABELS, TOPIC_COLORS, contentDB, TOPICS } from '../constants';
-import type { Topic, ContentItem } from '../constants';
+import type { Topic } from '../constants';
 
 interface ReportProps {
   userVector: number[];

@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { TOPIC_LABELS, TOPIC_COLORS, TOPICS } from '../constants';
 import type { Topic, ContentItem } from '../constants';
 import type { ScoreBreakdown } from '../engine';

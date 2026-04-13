@@ -16,7 +16,6 @@ interface Link extends d3.SimulationLinkDatum<Node> {}
 
 interface NetworkGraphProps {
   contentDB: ContentItem[];
-  interactionHistory: { contentId: number, topic: Topic, type: string }[];
   viewedIds: Set<number>;
   likedIds: Set<number>;
   skippedIds: Set<number>;
@@ -25,7 +24,6 @@ interface NetworkGraphProps {
 
 const NetworkGraph: React.FC<NetworkGraphProps> = ({ 
   contentDB, 
-  interactionHistory, 
   viewedIds, 
   likedIds, 
   skippedIds,
@@ -163,7 +161,9 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
       event.subject.fy = null;
     }
 
-    return () => simulation.stop();
+    return () => {
+      simulation.stop();
+    };
   }, [contentDB, viewedIds, likedIds, skippedIds]);
 
   return (
